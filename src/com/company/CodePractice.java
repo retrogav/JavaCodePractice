@@ -1,5 +1,7 @@
 package com.company;
 
+// This statement tells the Java compiler where in the Java library to find the Scanner class,
+// and makes it available to your program
 import java.util.Scanner;
 
 /**
@@ -263,7 +265,7 @@ public class CodePractice {
         System.out.println(area2);
 
         // The string class. When initialising, it becomes a class type variable. This compares to primitive
-        // type variables used above
+        // type variables used above.
         // The S in String is written in an uppercase letter. By convention, the first character
         // of a class name is always written in an uppercase letter.
         String greeting = "Good morning, ";
@@ -289,7 +291,48 @@ public class CodePractice {
         // Reading keyboard input.
         //
         // The data type of the variable is Scanner.
+        // The keyboard variable is a class type variable.
+        int number2;
         Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter an integer value: ");
+        number2 = keyboard.nextInt();
+
+        // code Listing 2-29 from the textbook
+        // demonstrates more of the Scanner class methods
+        String name2; // To hold a name
+        int hours; // Hours worked
+        double payRate; // Hourly pay rate
+        double grossPay; // Gross pay
+        // Create a Scanner object to read input.
+        Scanner keyboard2 = new Scanner(System.in);
+        // Get the user's name.
+        System.out.print("What is your name? ");
+        name2 = keyboard2.nextLine();
+        // Get the number of hours worked this week.
+        System.out.print("How many hours did you work this week? ");
+        hours = keyboard2.nextInt();
+        // Get the user's hourly pay rate.
+        System.out.print("What is your hourly pay rate? ");
+        payRate = keyboard2.nextDouble();
+        // Calculate the gross pay.
+        grossPay = hours * payRate;
+        // Display the resulting information.
+        System.out.println("Hello, " + name2);
+        System.out.println("Your gross pay is $" + grossPay);
+
+        // Reading a single character.
+        // Uses the string class’s charAt method to extract the first character of the string.
+        String input;
+        char answer;
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard3 = new Scanner(System.in);
+        System.out.print("Are you having fun? (Y=yes, N=no) ");
+        input = keyboard3.nextLine();   // Get a line of input.
+        answer = input.charAt(0);       // Get the first character.
+        System.out.println("You entered \"" + answer + "\"");
+
+
+
 
 
     }
