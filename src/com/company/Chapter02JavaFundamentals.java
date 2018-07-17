@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 // Class names and variable names are examples of identifiers.
 // It is standard practice to capitalize the first letter of a class name, as well as the first letter of each
 // subsequent word it contains. This helps differentiate the names of variables from the names of classes.
-public class CodePractice {
+public class Chapter02JavaFundamentals {
 
     /**
      * The main method is the program's starting point.
@@ -367,10 +367,6 @@ public class CodePractice {
         JOptionPane.showMessageDialog(null, "Hello World");
 
         System.exit(0);
-
-
-
-
 
 
     }
