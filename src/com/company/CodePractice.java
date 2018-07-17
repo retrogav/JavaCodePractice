@@ -1,8 +1,17 @@
+
+//  -----------------------------------------------------------------------------------
+//  Starting Out with Java 6th edition by Gaddis, Tony.
+//  Chapter 2: Java Fundamentals
+//  -----------------------------------------------------------------------------------
+
 package com.company;
 
 // This statement tells the Java compiler where in the Java library to find the Scanner class,
 // and makes it available to your program
 import java.util.Scanner;
+
+// Imports JOptionPane for dialog boxes
+import javax.swing.JOptionPane;
 
 /**
  * This class is a listing of code that was made when reading Starting Out with Java 6th edition.
@@ -295,30 +304,25 @@ public class CodePractice {
         int number2;
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter an integer value: ");
-        number2 = keyboard.nextInt();
+        //number2 = keyboard.nextInt();
 
         // code Listing 2-29 from the textbook
         // demonstrates more of the Scanner class methods
         String name2; // To hold a name
-        int hours; // Hours worked
-        double payRate; // Hourly pay rate
-        double grossPay; // Gross pay
+        int hours;
+        double payRate;
+        double grossPay;
         // Create a Scanner object to read input.
         Scanner keyboard2 = new Scanner(System.in);
-        // Get the user's name.
         System.out.print("What is your name? ");
-        name2 = keyboard2.nextLine();
-        // Get the number of hours worked this week.
+        //name2 = keyboard2.nextLine();
         System.out.print("How many hours did you work this week? ");
-        hours = keyboard2.nextInt();
-        // Get the user's hourly pay rate.
+        //hours = keyboard2.nextInt();
         System.out.print("What is your hourly pay rate? ");
-        payRate = keyboard2.nextDouble();
-        // Calculate the gross pay.
-        grossPay = hours * payRate;
-        // Display the resulting information.
-        System.out.println("Hello, " + name2);
-        System.out.println("Your gross pay is $" + grossPay);
+        //payRate = keyboard2.nextDouble();
+        //grossPay = hours * payRate;
+        //System.out.println("Hello, " + name2);
+        //System.out.println("Your gross pay is $" + grossPay);
 
         // Reading a single character.
         // Uses the string class’s charAt method to extract the first character of the string.
@@ -326,10 +330,44 @@ public class CodePractice {
         char answer;
         // Create a Scanner object for keyboard input.
         Scanner keyboard3 = new Scanner(System.in);
-        System.out.print("Are you having fun? (Y=yes, N=no) ");
-        input = keyboard3.nextLine();   // Get a line of input.
-        answer = input.charAt(0);       // Get the first character.
-        System.out.println("You entered \"" + answer + "\"");
+        System.out.println("Are you having fun? (Y=yes, N=no) ");
+        //input = keyboard3.nextLine();   // Get a line of input.
+        //answer = input.charAt(0);       // Get the first character.
+        //System.out.println("You entered \"" + answer + "\"");
+
+        // The nextLine method can take previous input (the newline character from the nextDouble method) which can
+        // cause problems. As this will cause the prompt to be skipped. The below code includes a line to consume the
+        // newline character to address this behaviour.
+        String name3;
+        int age;
+        double income;
+        // Create a Scanner object to read input.
+        Scanner keyboard4 = new Scanner(System.in);
+        System.out.println("What is your age? ");
+        //age = keyboard4.nextInt();
+        System.out.print("What is your annual income? ");
+        //income = keyboard4.nextDouble();
+        // Consume the remaining newline. It is not assigned to any variable as we do not need to keep the method's
+        // return value.
+        //keyboard4.nextLine();
+        System.out.print("What is your name? ");
+        //name3 = keyboard4.nextLine();
+        //System.out.println("Hello, " + name3 + ". Your age is " +
+        //       age + " and your income is $" + income);
+
+        // Dialog boxes
+        //
+
+
+        String name4;
+        // If the cancel button is clicked, then name will reference the special value "null".
+        // This is different to pressing ok with no data entered. name will reference "" in that case.
+        name4 = JOptionPane.showInputDialog("Enter your name.");
+
+        JOptionPane.showMessageDialog(null, "Hello World");
+
+        System.exit(0);
+
 
 
 
