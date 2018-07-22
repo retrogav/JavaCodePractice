@@ -1,8 +1,10 @@
 
-//  -----------------------------------------------------------------------------------
-//  Starting Out with Java 6th edition by Gaddis, Tony.
-//  Chapter 2: Java Fundamentals
-//  -----------------------------------------------------------------------------------
+/**
+ * -----------------------------------------------------------------------------------
+ * Starting Out with Java 6th edition by Gaddis, Tony.
+ * Chapter 2: Java Fundamentals
+ * ----------------------------------------------------------------------------------- *
+ */
 
 package com.company;
 
@@ -12,10 +14,6 @@ import java.util.Scanner;
 
 // Imports JOptionPane for dialog boxes
 import javax.swing.JOptionPane;
-
-/**
- * This class is a listing of code that was made when reading Starting Out with Java 6th edition.
- */
 
 // Class header.
 // Class names and variable names are examples of identifiers.
@@ -117,7 +115,7 @@ public class Chapter02JavaFundamentals {
                 "stood on this spot.");
 
         // you can declare several variables of the same type by separating their names with commas
-        int length, width, area;
+        int length, width, area2;
 
         // floating point data types
         double price, tax, total;
@@ -189,7 +187,7 @@ public class Chapter02JavaFundamentals {
         // Operators for manipulating numerical data.
         // Generally, there are three types of operators - unary, binary, and ternary.
 
-        // unary operator
+        // Unary operator. This example is the negation operator.
         number = -number;
 
         int total2 = 0, cost = 0, tax2 = 0, rate = 0, salePrice = 0, original = 0, remainder = 0;
@@ -270,8 +268,8 @@ public class Chapter02JavaFundamentals {
 
         // Math.PI named constant
         float radius = 3.2F;
-        float area2 = (float) (Math.PI * radius * radius);
-        System.out.println(area2);
+        float area3 = (float) (Math.PI * radius * radius);
+        System.out.println(area3);
 
         // The string class. When initialising, it becomes a class type variable. This compares to primitive
         // type variables used above.
@@ -350,21 +348,86 @@ public class Chapter02JavaFundamentals {
         // Consume the remaining newline. It is not assigned to any variable as we do not need to keep the method's
         // return value.
         //keyboard4.nextLine();
-        System.out.print("What is your name? ");
+        System.out.println("What is your name? ");
         //name3 = keyboard4.nextLine();
         //System.out.println("Hello, " + name3 + ". Your age is " +
         //       age + " and your income is $" + income);
 
         // Dialog boxes
         //
-
-
         String name4;
         // If the cancel button is clicked, then name will reference the special value "null".
         // This is different to pressing ok with no data entered. name will reference "" in that case.
-        name4 = JOptionPane.showInputDialog("Enter your name.");
+        //name4 = JOptionPane.showInputDialog("Enter your name.");
 
-        JOptionPane.showMessageDialog(null, "Hello World");
+        //JOptionPane.showMessageDialog(null, "Hello World");
+
+        // The System.exit method is used because, unlike a console program, a program that uses JOptionPane does not
+        // automatically stop executing when the end of the main method is reached. The JOptionPane class causes an
+        // additional task to run in the JVM.
+        //System.exit(0);               // requires an integer argument. The value 0 traditionally indicates that
+        // the program ended successfully
+
+        // Converting string input to numbers.
+        //
+        // Unlike the Scanner class, the JOptionPane class does not have different methods for reading values of
+        // different data types as input.
+        // The showInputDialog method always returns the user’s input as a String, even if the user enters numeric data.
+
+        // Note: Both of the methods below for converting string input are part of Java's wrapper classes.
+        // You will learn more about them in Chapter 9.
+
+        // Using the Integer.parseInt method
+        int number5;
+        String str;
+        //str = JOptionPane.showInputDialog("Enter a number.");
+        //number5 = Integer.parseInt(str);
+
+        // Using the Double.parseDouble method
+        double price2;
+        String str2;
+        //str2 = JOptionPane.showInputDialog("Enter the retail price.");
+        //price2 = Double.parseDouble(str);
+
+        // Checkpoint 2.35
+        // Write code that will display each of the dialog boxes shown in Figure 2-19.
+
+        //JOptionPane.showMessageDialog(null, "Greetings Earthling.");
+        //JOptionPane.showInputDialog("Enter a number.");
+
+        // Checkpoint 2.36
+        // Write code that displays an input dialog asking the user to enter his or her age.
+        // Convert the input value to an int and store it in an int variable named age.
+        String userAge;
+        //userAge = JOptionPane.showInputDialog("Enter your age");
+        //age = Integer.parseInt(userAge);
+
+        // Algorithm Workbench
+        // 12.
+        // Convert the following pseudocode to Java code. Be sure to declare the appropriate variables.
+        // Store 172.5 in the force variable.
+        // Store 27.5 in the area variable.
+        // Divide area by force and store the result in the pressure variable.
+        // Display the contents of the pressure variable.
+        float force = 172.5F;
+        float area = 27.5F;
+        float pressure = area/force;
+        System.out.println(pressure);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         System.exit(0);
 
