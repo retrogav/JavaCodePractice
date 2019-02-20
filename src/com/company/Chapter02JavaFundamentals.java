@@ -382,6 +382,7 @@ public class Chapter02JavaFundamentals {
         String str;
         //str = JOptionPane.showInputDialog("Enter a number.");
         //number5 = Integer.parseInt(str);
+        
 
         // Using the Double.parseDouble method
         double price2;
